@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Instructor do
   describe 'attributes' do
     it 'has a name' do
-      instructor = build(:instuctor)
+      instructor = build(:instructor)
 
       expect(instructor.name).to eq('Mike')
     end

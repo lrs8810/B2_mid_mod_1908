@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Student do
   describe 'attributes' do
     it 'has a name, cohort number, and age' do
-      student = create(:student)
+      student = build(:student)
 
       expect(student.name).to eq('Laura')
       expect(student.cohort_num).to eq('1908')
@@ -13,7 +13,7 @@ RSpec.describe Student do
 
   describe 'validations' do
     it { should validate_presence_of :name }
-    it { should validate_presence_of :cohort_name }
+    it { should validate_presence_of :cohort_num }
     it { should validate_presence_of :age }
   end
 
