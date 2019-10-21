@@ -27,7 +27,6 @@ RSpec.describe Student do
       create(:student, age: 20)
       create(:student, age: 25)
       create(:student, age: 42)
-      binding.pry
 
       expect(Student.average_age).to eq(29)
     end
