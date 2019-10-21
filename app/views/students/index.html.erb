@@ -4,7 +4,7 @@
     <h4> <%= student.name %> </h4>
     <p>Cohort: <%= student.cohort %> </p>
     <% student.instructors.each do |instructor| %>
-      <li> <%= instructor.name %> </li>
+      <li> <%= link_to instructor.name, "/instructors/#{instructor.id}" %> </li>
       <% end %>
   </section>
 <% end %>

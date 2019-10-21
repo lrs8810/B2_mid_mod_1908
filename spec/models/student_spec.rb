@@ -21,4 +21,15 @@ RSpec.describe Student do
     it { should have_many :instructor_students }
     it { should have_many(:instructors).through(:instructor_students) }
   end
+
+  describe 'class methods' do
+    it '.average_age' do
+      create(:student, age: 20)
+      create(:student, age: 25)
+      create(:student, age: 42)
+      binding.pry
+
+      expect(Student.average_age).to eq(29)
+    end
+  end
 end
