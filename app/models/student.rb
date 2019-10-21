@@ -5,4 +5,8 @@ class Student < ApplicationRecord
   validates_presence_of :name
   validates_presence_of :cohort
   validates_presence_of :age
+
+  def self.average_age
+    average(:age).round(2)
+  end
 end
