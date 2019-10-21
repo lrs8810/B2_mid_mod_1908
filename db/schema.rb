@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2019_10_20_174527) do
 
   create_table "students", force: :cascade do |t|
     t.string "name"
-    t.string "cohort_num"
+    t.string "cohort"
     t.integer "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

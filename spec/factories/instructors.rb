@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :instructor do
-    name { 'Mike' }
+    sequence(:name) {|i| "Mike#{i}" }
   end
 end

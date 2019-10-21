@@ -5,7 +5,7 @@ RSpec.describe Instructor do
     it 'has a name' do
       instructor = build(:instructor)
 
-      expect(instructor.name).to eq('Mike')
+      expect(instructor).to respond_to(:name)
     end
   end
 
