@@ -5,15 +5,15 @@ RSpec.describe Student do
     it 'has a name, cohort number, and age' do
       student = build(:student)
 
-      expect(student.name).to eq('Laura')
-      expect(student.cohort_num).to eq('1908')
-      expect(student.age).to eq(31)
+      expect(student).to respond_to(:name)
+      expect(student.cohort).to eq('1908')
+      expect(student).to respond_to(:age)
     end
   end
 
   describe 'validations' do
     it { should validate_presence_of :name }
-    it { should validate_presence_of :cohort_num }
+    it { should validate_presence_of :cohort }
     it { should validate_presence_of :age }
   end
 
